@@ -12,6 +12,10 @@ class Journalist(models.Model):#start Journalist
         #code
         return self.name + ' ' + self.surname + '\nAssociation: ' + self.association
     #end __str__
+    class Meta:#start class Meta
+        verbose_name = 'Journalist'
+        verbose_name_plural = 'Journalists'
+    #end class Meta
 #end Journalist
 
 class Article(models.Model):#start Article
@@ -26,4 +30,8 @@ class Article(models.Model):#start Article
         #code
         return self.title
     #end __str__
+    class Meta:#start class Meta
+        verbose_name = 'Article'
+        verbose_name_plural = 'Articles'
+    #end class Meta
 #end Article
