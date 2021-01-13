@@ -59,7 +59,9 @@ ROOT_URLCONF = 'first_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'first_app/templates')],#adding the templates folder
+        'DIRS': [os.path.join(BASE_DIR, 'first_app/templates'),#adding the templates folder
+                 os.path.join(BASE_DIR, 'second_app/templates'),#adding the templates folder
+                 os.path.join(BASE_DIR, 'news_app/templates')],#adding the templates folder
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
