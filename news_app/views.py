@@ -10,5 +10,5 @@ def home(request):#start home function
     #code
     context = {"Articles": articles, "Journalists": journalists}
     print(context)
-    return render(request, "homepage.html", context)
+    return render(request, "homepage_news.html", context)
 #end home function
