@@ -16,6 +16,8 @@ Including another URLconf
 #from -- import
 from django.contrib import admin
 from django.urls import path, include
+from forms_app.views import contacts
+
 #code
 urlpatterns = [#start urlpatterns
 	path('contact_us/', contacts, name = "contacts"),#adding the path into the 'forms_app/contacts_us'
