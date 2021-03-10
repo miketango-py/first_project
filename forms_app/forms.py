@@ -3,7 +3,7 @@ from django import forms
 #functions -- classes
 
 #creating the class for the contact form
-class contact_form (forms.Form):#start contact_form
+class contact_form (forms.Form):#start contact_form (for save in the database change "forms.Form" to "forms.ModelForm")
 
 	#variables
 	name = ""; surname = ""#name and surname of the contact
