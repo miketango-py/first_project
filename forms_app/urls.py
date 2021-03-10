@@ -16,13 +16,7 @@ Including another URLconf
 #from -- import
 from django.contrib import admin
 from django.urls import path, include
-from first_app.views import index
 #code
 urlpatterns = [#start urlpatterns
-    path('admin/', admin.site.urls),
-    path('', index, name = 'index'),
-    path('first_app/', include('first_app.urls')),
-    path('second_app/', include('second_app.urls')),
-    path('news_app/', include('news_app.urls')),
-    path('forms_app/', include('forms_app.urls')),#adding the path into the 'forms_app'
+	path('contact_us/', contacts, name = "contacts"),#adding the path into the 'forms_app/contacts_us'
 ]#end urlpatterns
