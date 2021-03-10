@@ -31,18 +31,19 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [#start INSTALLED_APPS
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'first_app',
-    'second_app',
-    'news_app',
-    'library_app',
-]
+    'first_app',#adding the 'first_app' application
+    'second_app',#adding the 'second_app' application
+    'news_app',#adding the 'news_app' application
+    'library_app',#adding the 'library_app' application
+    'forms_app',#adding the 'forms_app' application
+]#start INSTALLED_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
