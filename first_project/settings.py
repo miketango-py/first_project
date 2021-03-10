@@ -62,7 +62,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'first_app/templates'),#adding the templates folder
                  os.path.join(BASE_DIR, 'second_app/templates'),#adding the templates folder
-                 os.path.join(BASE_DIR, 'news_app/templates')],#adding the templates folder
+                 os.path.join(BASE_DIR, 'news_app/templates'),#adding the templates folder
+                 os.path.join(BASE_DIR, 'forms_app/templates')],#adding the 'templates' folder of 'forms_app'
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
