@@ -67,13 +67,8 @@
 
 				<!--message form-->
 				<form method = 'POST'><!--start form-->
-					<p>Name</p>
-					<input type = 'text' placeholder="Insert your name">
-					<p>Surnname</p>
-					<input type = 'text' placeholder="Insert your surname">
-					<p>Your Comment</p>
-					<textarea placeholder="Write Here!"></textarea>
-					<input type = 'submit' class = 'btn btn-danger' value = 'Send'><!--sending the message-->
+					{% csfr_token %}
+					{{form.as_p}}
 				</form><!--end form-->
 
 				<p><a href = 'http://marcotrezzi.pythonanywhere.com/first_app/index/'>| Homepage |</p></a><!--linking the homepage of the project-->
