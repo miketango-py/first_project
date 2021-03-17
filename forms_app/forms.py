@@ -1,21 +1,12 @@
-#from -- import
 from django import forms
-#functions -- classes
+from .models import Contatto
 
-#creating the class for the contact form
-class contact_form (forms.Form):#start contact_form (for save in the database change "forms.Form" to "forms.ModelForm")
+class FormContatto(forms.ModelForm): 
+    #nome = forms.CharField()
+    #cognome = forms.CharField()
+    #email = forms.EmailField()
+    #contenuto = forms.CharField(widget=forms.Textarea(attrs={"placeholder": "area testuale"}))
+    class Meta: 
+        model=Contatto
+        fields="__all__"
 
-	#variables
-	name = ""; surname = ""#name and surname of the contact
-	email = ""; content = ""#e-mail and content of the contact
-
-	#code
-	name = forms.CharField()#assigning name of the contact
-	surname = forms.CharField()#assigning surname of the contact
-	e_mail = forms.EmailField()#assigning e-mail of the contact
-	
-	#creating the textual area where the contact will put the message
-	content = forms.CharField(widget = forms.Textarea (attrs = {"placeholder" : "Textual Area! You can write!"}))#assigning message of the contact
-
-#end contact_form
-#code

@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{%block title%}
+	{{block.super}} | Index
+{%endblock title%}
+
+{%block content%}
+    <h3>Ciao a tutti e benvenuti nella homepage!</h3>
+
+    <h3>Prima app:</h3>
+    <ol>
+        <li><a href="{% url 'prima_app:index'%}">index</a></li>
+        <li><a href="{% url 'prima_app:menu'%}">menu</a></li>
+        <li><a href="{% url 'prima_app:chisiamo'%}">chi siamo</a></li>
+        <li><a href="{% url 'prima_app:variabili'%}">variabili</a></li>
+    </ol>
+
+    <h3>Seconda app:</h3>
+     <ol>
+        <li><a href="{% url 'seconda_app:for'%}">esercizio for</a></li>
+        <li><a href="{% url 'seconda_app:if'%}">esercizio if</a></li>
+        <li><a href="{% url 'seconda_app:elif'%}">esercizio ifelif</a></li>
+        <li><a href="{% url 'seconda_app:ifelse'%}">esercizio ifelse</a></li>
+    </ol>
+{%endblock content%}
