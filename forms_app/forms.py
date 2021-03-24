@@ -14,23 +14,24 @@ class FormContatto(forms.ModelForm): #start class FormContatto
             'email' : forms.EmailInput(attrs = {'placeholder':'Fill this field', 'class':'form-control'}),
             'contenuto' : forms.Textarea(attrs = {'placeholder':'Write minimum 20 characters', 'class':'form-control'})
         }
+
+
+    def clean_context(self): #start clean_context; general sintax = clean_field_to_validate
+        
+        #code
+        dati = self.cleaned_data["contenuto"]
+        
+        #"parola" is not admitted
+        if "parola" in dati:#start if; error 1
+            raise ValidationError ("The context is violating the site norms!")
+        #end if
+
+        #data too short
+        if len(dati) < 20:#start if
+            raise ValidationError("The context is too short!")
+        #end if
+
+        return dati
+
+    #end clean_context
 #end class FormContatto
-
-def clean_context(self): #start clean_context; general sintax = clean_field_to_validate
-    
-    #code
-    data = self.cleaned_data["contenuto"]
-    
-    #"parola" is not admitted
-    if "parola" in data:#start if; error 1
-        raise ValidationError ("The context is violating the site norms!")
-    #end if
-
-    #data too short
-    if len(data) < 20:#start if
-        raise ValidationError("The context is too short!")
-    #end if
-
-    return data
-
-#end clean_context
