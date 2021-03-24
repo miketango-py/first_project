@@ -9,17 +9,17 @@ class FormContatto(forms.ModelForm): #start class FormContatto
         model=Contatto
         fields="__all__"
         widgets = {
-            'name' : forms.TextInput(attrs = {'placeholder':'Fill this field', 'class':'form-control'}),
-            'surname' : forms.TextInput(attrs = {'placeholder':'Fill this field', 'class':'form-control'}),
+            'nome' : forms.TextInput(attrs = {'placeholder':'Fill this field', 'class':'form-control'}),
+            'cognome' : forms.TextInput(attrs = {'placeholder':'Fill this field', 'class':'form-control'}),
             'email' : forms.EmailInput(attrs = {'placeholder':'Fill this field', 'class':'form-control'}),
-            'context' : forms.Textarea(attrs = {'placeholder':'Write minimum 20 characters', 'class':'form-control'})
+            'contenuto' : forms.Textarea(attrs = {'placeholder':'Write minimum 20 characters', 'class':'form-control'})
         }
 #end class FormContatto
 
 def clean_context(self): #start clean_context; general sintax = clean_field_to_validate
     
     #code
-    data = self.cleaned_data["context"]
+    data = self.cleaned_data["contenuto"]
     
     #"parola" is not admitted
     if "parola" in data:#start if; error 1
