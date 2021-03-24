@@ -17,8 +17,7 @@ def contatti (request):
 
         #is valid() controlla se il form inserito è valido
         if form.is_valid(): 
-            #!RICORDA! cleaned_data["nome_dato"] ci permette di accedere ai dati validati e convertiti in tipi standard di python
-            print("Salvo il contatto nel database")
+            print("Saving the contact to the database")
             nuovo_contatto = form.save()
             print("new_post: ", nuovo_contatto)
             print(nuovo_contatto.nome)
