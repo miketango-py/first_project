@@ -14,9 +14,9 @@ class FormContatto(forms.ModelForm): #start class FormContatto
             'email' : forms.EmailInput(attrs = {'placeholder':'Fill this field', 'class':'form-control'}),
             'contenuto' : forms.Textarea(attrs = {'placeholder':'Write minimum 20 characters', 'class':'form-control'})
         }
+    #end class Meta
 
-
-    def clean_context(self): #start clean_context; general sintax = clean_field_to_validate
+    def clean_contenuto(self): #start clean_context; general sintax = clean_field_to_validate
         
         #code
         dati = self.cleaned_data["contenuto"]
